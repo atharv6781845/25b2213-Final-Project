@@ -7,11 +7,11 @@ export default function App() {
     const [status, setStatus] = useState('');
 
     // Target your local Django server URL for now
-    const API_BASE = "http://localhost:8000/api";
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
     // 1. Fetch live doctors from database upon load
     useEffect(() => {
-        fetch(`${API_BASE}/doctors/`)
+        fetch(`${API_URL}/doctors/`)
             .then(res => res.json())
             .then(data => setDoctors(data))
             .catch(err => console.error("Error connecting to backend:", err));
@@ -30,7 +30,7 @@ export default function App() {
             time_slot: formData.slot
         };
 
-        fetch(`${API_BASE}/appointments/`, {
+        fetch(`${API_URL}/appointments/`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
