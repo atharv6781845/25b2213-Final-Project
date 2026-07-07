@@ -87,7 +87,7 @@ export default function App() {
 
                             >
                                 <img 
-                                    src={doc.id == 1 && "../../public/images/Robert De Niro.jpg" || doc.id == 2 && "../../public/images/Al Pacino.jpg" || doc.id == 3 && "../../public/images/Jake Gyllenhall.jpg" || doc.id == 4 && "../../public/images/Leonardo DiCaprio.jpg" || doc.id == 5 && "../../public/images/Brad Pitt.jpg" || doc.id == 6 && "../../public/images/Johnny Depp.jpg"} 
+                                    src={doc.id == 1 && "/images/Robert De Niro.jpg" || doc.id == 2 && "/images/Al Pacino.jpg" || doc.id == 3 && "/images/Jake Gyllenhall.jpg" || doc.id == 4 && "/images/Leonardo DiCaprio.jpg" || doc.id == 5 && "/images/Brad Pitt.jpg" || doc.id == 6 && "/images/Johnny Depp.jpg"} 
                                     alt="Doctor Avatar" 
                                     style={{ width: '60px', height: '60px', borderRadius: '50%', background: '#e2e8f0', padding: '4px' }}
                                 />
